@@ -11,6 +11,7 @@ n <- Sys.time() #See how long this takes to run
 
 library(tidyverse)
 library(jsonlite)
+library(caret)
 
 train <- read_csv("../input/train.csv")
 test <- read_csv("../input/test.csv")
