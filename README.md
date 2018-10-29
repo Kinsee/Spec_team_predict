@@ -75,7 +75,7 @@ cols.dont.want <- c("socialEngagementType","browserVersion","browserSize","opera
 #some more columns to delete: socialEngagementType, city
 data <- train[, ! names(train) %in% cols.dont.want, drop = F]
 
-#Turn factor into matrix by dummy vars from caret https://amunategui.github.io/dummyVar-Walkthrough/
+#Turn factor into matrix by dummy vars from caret (Onehotencoder bkb Labelencoder) https://amunategui.github.io/dummyVar-Walkthrough/
 
 dmy <- dummyVars(" ~ browser", data = data)
 trsf <- data.frame(predict(dmy, newdata = train))
